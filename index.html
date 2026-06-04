@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anuka Varsha — Engineering to Procurement & Supply Chain</title>
+<meta name="description" content="Portfolio of Anuka Varsha — from mechanical design and reverse engineering to procurement, supply chain, purchasing and industrial management.">
+<style>
+:root{
+  --ink:#111827;
+  --text:#374151;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --bg:#f7f3ed;
+  --card:#ffffff;
+  --accent:#b45309;
+  --accent-soft:#fff7ed;
+  --blue:#1f3a5f;
+  --green:#2f5d50;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.62;font-size:16px}
+a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:0;background:rgba(247,243,237,.93);backdrop-filter:blur(12px);z-index:5;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}.logo{font-weight:850;letter-spacing:-.03em}.nav-links{display:flex;gap:20px;font-size:.92rem;color:var(--muted)}.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--accent)}
+.hero{padding:74px 0 54px;border-top:none}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}.kicker{color:var(--accent);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850;margin-bottom:18px}h1{font-size:clamp(2.45rem,6vw,5.1rem);line-height:.96;letter-spacing:-.057em;margin-bottom:22px}.tag{font-size:1.2rem;color:var(--text);max-width:760px;margin-bottom:26px}.meta{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);font-size:.95rem;margin-bottom:26px}.btns{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:white;text-decoration:none;border-radius:999px;padding:12px 18px;font-weight:750;font-size:.94rem;border:1px solid var(--ink)}.btn.secondary{background:transparent;color:var(--ink)}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(17,24,39,.08)}.hero-card img{width:100%;height:390px;object-fit:cover;display:block}.hero-card .pad{padding:18px 20px}.hero-card p{color:var(--text);font-size:.95rem;margin:0}
+section{padding:60px 0;border-top:1px solid var(--line)}h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:900;margin-bottom:22px}h3{font-size:1.35rem;letter-spacing:-.02em;margin-bottom:6px}p{color:var(--text);margin-bottom:14px}.lead{font-size:1.08rem;max-width:850px}.muted{color:var(--muted)}
+.two-col{display:grid;grid-template-columns:.86fr 1.14fr;gap:34px}.side-note{color:var(--muted);font-size:.96rem}.quote{font-size:1.42rem;line-height:1.35;color:var(--ink);letter-spacing:-.025em;font-weight:760;margin-top:6px}.highlight{background:var(--accent-soft);border:1px solid #fed7aa;border-radius:22px;padding:24px}
+.bridge{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch;margin-top:28px}.bridge-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}.bridge-card .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:850;margin-bottom:10px}.bridge-card h3{font-size:1.28rem}.bridge-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:2rem}.bridge ul{padding-left:18px;color:var(--text)}.bridge li{margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}.card p{font-size:.95rem;margin-bottom:0}.card .small{font-size:.83rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:850;margin-bottom:8px}
+.experience{display:grid;gap:18px}.job{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.role{color:var(--muted);font-size:.95rem;margin-bottom:12px}.job ul,.project ul{padding-left:20px;color:var(--text)}.job li,.project li{margin-bottom:8px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;margin-bottom:24px}.project-img{width:100%;height:360px;object-fit:cover;display:block}.project-body{padding:24px}.caption{font-size:.88rem;color:var(--muted);font-style:italic;margin-bottom:12px}.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.pill{font-size:.82rem;background:#f3f4f6;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--text);font-weight:750}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.gallery-card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}.gallery-card img{width:100%;height:300px;object-fit:cover;display:block}.gallery-card .body{padding:18px}.gallery-card h3{font-size:1.08rem}.gallery-card p{font-size:.93rem;margin:0;color:var(--text)}
+.project-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px}.strip-card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}.strip-card img{width:100%;height:250px;object-fit:cover}.strip-card .body{padding:20px}.strip-card h3{font-size:1.2rem}.strip-card ul{padding-left:19px;color:var(--text);font-size:.95rem}.strip-card li{margin-bottom:7px}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.cert{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}.cert img{width:100%;height:240px;object-fit:contain;background:white;padding:18px;border-bottom:1px solid var(--line)}.cert .body{padding:18px}.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.skill{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.skill h3{font-size:1.05rem}.skill p{font-size:.94rem;margin-bottom:0}
+.cta{background:var(--ink);color:white;border-radius:28px;padding:42px;text-align:center}.cta h2{color:#fbbf24}.cta p{color:#d1d5db;max-width:680px;margin:0 auto 24px}.cta .btn{background:#fbbf24;color:var(--ink);border-color:#fbbf24}footer{padding:34px 0;color:var(--muted);text-align:center;font-size:.9rem}
+@media(max-width:880px){.hero-grid,.two-col,.cards,.gallery,.cert-grid,.skills,.bridge,.project-strip{grid-template-columns:1fr}.bridge-arrow{transform:rotate(90deg)}.nav-links{display:none}.hero-card img{height:300px}.project-img,.gallery-card img{height:260px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><div class="logo">Anuka Varsha</div><div class="nav-links"><a href="#story">Story</a><a href="#proof">Proof of work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Mechanical engineering foundation → Procurement & supply chain direction</div>
+        <h1>From shop-floor engineering to sourcing and supply chain.</h1>
+        <p class="tag">I started by designing and reverse engineering industrial pump components. Moving forward, I want to use that technical foundation in purchasing, procurement, supply chain, and industrial operations roles.</p>
+        <div class="meta"><span>📍 Pforzheim, Germany</span><span>✉️ anuka.varsha29@gmail.com</span><span>☎ +49 155 107 33746</span><a href="https://www.linkedin.com/in/anukavarsha" target="_blank" rel="noopener">LinkedIn</a></div>
+        <div class="btns"><a class="btn" href="files/Anuka_Varsha_CV_2026.pdf" target="_blank">Download CV</a><a class="btn secondary" href="#proof">View proof of work</a></div>
+      </div>
+      <div class="hero-card">
+        <img src="img/faro-arm-scan.jpg" alt="FARO Arm scanning setup with CAD reconstruction on screen">
+        <div class="pad"><p><strong>My base:</strong> real engineering work with pump components, shop-floor constraints, reverse engineering and technical documentation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="two-col">
+      <div>
+        <h2>Career direction</h2>
+        <p class="side-note">This portfolio is not only what I have done before. It also shows where I want to grow next.</p>
+      </div>
+      <div>
+        <p class="lead">My previous experience is strongly technical. I worked with industrial pumps, reverse engineering, FARO Arm scanning, CAD models, manufacturing drawings, and shop-floor problem solving. That gave me a practical understanding of how products are built, serviced and improved.</p>
+        <p class="lead">During my Bosch purchasing internship and my Master’s in Industrial Management, I became more interested in the business side of industry: purchasing, supplier coordination, sourcing strategy, process improvement and supply chain decisions. This is the direction I want to grow in now.</p>
+      </div>
+    </div>
+
+    <div class="bridge">
+      <div class="bridge-card">
+        <div class="eyebrow">Previous foundation</div>
+        <h3>Engineering & product work</h3>
+        <ul>
+          <li>Industrial pump components and assemblies</li>
+          <li>Reverse engineering with FARO Arm and Geomagic Design X</li>
+          <li>SolidWorks models and manufacturing drawings</li>
+          <li>Shop-floor support, site visits and troubleshooting</li>
+        </ul>
+      </div>
+      <div class="bridge-arrow">→</div>
+      <div class="bridge-card">
+        <div class="eyebrow">Moving forward</div>
+        <h3>Procurement, supply chain & operations</h3>
+        <ul>
+          <li>Purchasing and supplier coordination</li>
+          <li>Offer comparison, documentation and reporting</li>
+          <li>Procurement process improvement and sourcing strategy</li>
+          <li>Cross-functional project work with technical understanding</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience that connects both sides</h2>
+    <div class="experience">
+      <div class="job">
+        <h3>Bosch India — Purchasing Department Intern</h3>
+        <p class="role">February 2023 – August 2023 · Bangalore, India</p>
+        <p>This was my first step into purchasing. I supported supplier coordination, purchase order tracking, supplier documentation, delivery follow-ups, and Excel/SAP reporting.</p>
+        <ul>
+          <li>Worked with purchasing, suppliers, engineering and internal teams.</li>
+          <li>Supported purchasing records, data tracking and documentation.</li>
+          <li>Learned how accurate data and clear communication affect procurement operations.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Torishima Pumps India — Junior Design Engineer</h3>
+        <p class="role">September 2023 – October 2025 · Bangalore, India</p>
+        <p>This is my engineering foundation. I worked on industrial pump components, reverse engineering, technical documentation, drawings, shop-floor work and power plant service-related exposure.</p>
+        <ul>
+          <li>Designed/redesigned pump components and assemblies using SolidWorks and AutoCAD.</li>
+          <li>Used FARO Arm scanning and Geomagic Design X to rebuild worn parts for existing assemblies.</li>
+          <li>Worked on boiler feed pump service/redesign topics and coupling-related reverse engineering work.</li>
+          <li>Made support stands for pump setups and different pump sizes to improve practical handling.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <h2>Proof of engineering work</h2>
+    <p class="lead">These pictures show the technical base I bring into procurement and supply chain: I understand products not only as purchase items, but also as real components used in assembly, service and power plant environments.</p>
+
+    <article class="project">
+      <img class="project-img" src="img/faro-arm-scan.jpg" alt="FARO Arm scanning setup at Torishima Pumps">
+      <div class="project-body">
+        <h3>Reverse engineering with FARO Arm + Geomagic Design X</h3>
+        <p class="caption">Scanning and rebuilding worn pump component geometry for existing assemblies.</p>
+        <p>I used FARO Arm scanning and CAD reconstruction to support reverse engineering work. This type of work needs patience, accuracy and understanding of fitment, because the redesigned part must match the existing assembly even when original drawings are limited or missing.</p>
+        <div class="pill-row"><span class="pill">FARO Arm</span><span class="pill">Geomagic Design X</span><span class="pill">SolidWorks</span><span class="pill">Reverse engineering</span></div>
+      </div>
+    </article>
+
+    <div class="gallery">
+      <div class="gallery-card"><img src="img/support-stand-horizontal.jpg" alt="Support stand made for an industrial pump"><div class="body"><h3>Support stand for pump setup</h3><p>I made this support stand for a pump setup, focusing on practical fit, handling and shop-floor use.</p></div></div>
+      <div class="gallery-card"><img src="img/adjustable-pump-stand.jpg" alt="Pump stand designed to fit different pump sizes"><div class="body"><h3>Adjustable pump stand</h3><p>I made/designed this pump stand to fit different pump sizes and support safer assembly work.</p></div></div>
+      <div class="gallery-card"><img src="img/pump-impellers.jpg" alt="Industrial pump impellers on inspection table"><div class="body"><h3>Impeller design and inspection</h3><p>Worked with critical pump components where dimensions, tolerances and documentation affect final assembly.</p></div></div>
+      <div class="gallery-card"><img src="img/pump-shaft-assembly.jpg" alt="Multi-stage industrial pump assembly on shop floor"><div class="body"><h3>Multi-stage pump assembly</h3><p>Exposure to large industrial pump assemblies used in power plant and service environments.</p></div></div>
+      <div class="gallery-card"><img src="img/boiler-feed-pump-coupling.jpg" alt="Boiler feed pump setup and coupling work area"><div class="body"><h3>Boiler feed pump setup</h3><p>Worked with boiler feed pump service/redesign topics and coupling-related reverse engineering work.</p></div></div>
+      <div class="gallery-card"><img src="img/powerplant-visit.jpg" alt="Power plant site visit"><div class="body"><h3>Power plant visit</h3><p>Visited a power plant site to understand real operating conditions, pump service needs and troubleshooting context.</p></div></div>
+      <div class="gallery-card"><img src="img/turbine-room.jpg" alt="Turbine room at a power plant"><div class="body"><h3>Turbine room exposure</h3><p>Site exposure helped me connect design and service work with actual plant systems and operating environments.</p></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects showing my future direction</h2>
+    <p class="lead">These projects are the bridge between my engineering background and the roles I am applying for now: procurement, purchasing, supply chain, sourcing, operations and process improvement.</p>
+    <div class="project-strip">
+      <div class="strip-card"><img src="img/bosch-certificate.jpg" alt="Bosch internship completion certificate"><div class="body"><h3>Bosch — purchasing exposure</h3><ul><li>Supplier coordination and purchase order tracking</li><li>Engineering change request support</li><li>Excel/SAP reporting and documentation</li><li>Working between suppliers, engineering and purchasing</li></ul></div></div>
+      <div class="strip-card"><img src="img/porsche-presentation-day.jpg" alt="Porsche AG university collaboration project presentation day"><div class="body"><h3>Porsche AG — dual supplier strategy project</h3><ul><li>Team-based university collaboration project</li><li>Research on emerging regions for dual supplier strategies</li><li>Supplier network resilience and supply risk reduction</li><li>Benchmarking and strategic sourcing recommendations</li></ul></div></div>
+      <div class="strip-card"><img src="img/solidworks-certificate.jpg" alt="SOLIDWORKS CAD Design Professional certificate"><div class="body"><h3>Hilti — procurement process project</h3><ul><li>Team-based university project involving Hilti</li><li>Understanding global procurement processes</li><li>Benchmarking and implementation-oriented recommendations</li><li>Focus on improvement ideas and practical steps</li></ul></div></div>
+      <div class="strip-card"><img src="img/solidworks-certificate.jpg" alt="SOLIDWORKS CAD Design Professional certificate"><div class="body"><h3>SOLIDWORKS CAD Design Professional</h3><ul><li>Certified CAD design professional</li><li>Strong base in engineering drawings and product modelling</li><li>Useful technical understanding for procurement of engineered products</li></ul></div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills I bring</h2>
+    <div class="skills">
+      <div class="skill"><h3>Purchasing & procurement</h3><p>SAP, supplier coordination, purchase order tracking, supplier documentation, engineering change requests, Excel reporting.</p></div>
+      <div class="skill"><h3>Supply chain & operations</h3><p>Process understanding, cross-functional coordination, implementation thinking, supplier networks, benchmarking and structured research.</p></div>
+      <div class="skill"><h3>Engineering foundation</h3><p>SolidWorks, AutoCAD, Siemens NX, Geomagic Design X, FARO Arm scanning, reverse engineering, pump components and technical documentation.</p></div>
+      <div class="skill"><h3>Data & digital tools</h3><p>Excel, PowerPoint, Word, Teams, Outlook, basic Python, MATLAB, C/C++, GitHub, basic machine learning concepts.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-top:none;">
+    <div class="cta">
+      <h2>Moving forward</h2>
+      <p>I am looking for working student or internship roles where I can combine my engineering foundation with procurement, purchasing, supply chain, process improvement and industrial management.</p>
+      <a class="btn" href="mailto:anuka.varsha29@gmail.com">Email me</a>
+    </div>
+  </section>
+</main>
+<footer>© Anuka Varsha · Pforzheim, Germany</footer>
+</body>
+</html>
