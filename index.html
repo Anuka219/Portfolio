@@ -86,17 +86,21 @@ h3{font-size:1.15rem;letter-spacing:-.01em;font-weight:600;color:#0f172a}
 
 /* ENGINEERING PROOF */
 .proof-feature{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;margin-bottom:36px}
-.proof-feature img{width:100%;height:340px;object-fit:cover;border-radius:12px;border:1px solid #e8e3d8}
+.proof-feature img{width:100%;height:340px;object-fit:cover;border-radius:12px;border:1px solid #e8e3d8;background:#0f172a;transition:object-fit .25s,padding .25s,box-shadow .2s}
+.proof-feature img:hover{object-fit:contain;padding:10px;box-shadow:0 14px 32px rgba(15,23,42,.18)}
 .proof-feature .text h3{font-size:1.3rem;margin-bottom:10px}
 .proof-feature .text p{color:#475569;margin-bottom:14px;font-size:.98rem;line-height:1.65}
 .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .tag{font-size:.78rem;background:#f5f1e6;border:1px solid #e8e3d8;border-radius:6px;padding:5px 10px;color:#475569;font-weight:500}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.g-card{background:#fff;border:1px solid #e8e3d8;border-radius:10px;overflow:hidden;transition:transform .15s,box-shadow .15s;cursor:zoom-in}
-.g-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,23,42,.1)}
-.g-card .img-wrap{overflow:hidden;position:relative}
-.g-card .img-wrap img{width:100%;height:200px;object-fit:cover;transition:transform .35s ease}
-.g-card:hover .img-wrap img{transform:scale(1.05)}
+.g-card{background:#fff;border:1px solid #e8e3d8;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;cursor:zoom-in;position:relative}
+.g-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.14);border-color:#0f172a}
+.g-card .img-wrap{overflow:hidden;position:relative;background:#f5f1e6;height:220px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.g-card:hover .img-wrap{background:#0f172a}
+.g-card .img-wrap img{width:100%;height:100%;object-fit:cover;transition:object-fit .25s,padding .25s,transform .25s}
+.g-card:hover .img-wrap img{object-fit:contain;padding:8px}
+.g-card .zoom-hint{position:absolute;top:10px;right:10px;background:rgba(15,23,42,.78);color:#fff;font-size:.7rem;padding:4px 8px;border-radius:6px;opacity:0;transition:opacity .2s;font-weight:600;letter-spacing:.04em;pointer-events:none;z-index:2}
+.g-card:hover .zoom-hint{opacity:1}
 .g-card .body{padding:14px 16px}
 .g-card h3{font-size:.95rem;margin-bottom:4px}
 .g-card p{font-size:.82rem;color:#64748b;margin:0;line-height:1.5}
@@ -317,7 +321,7 @@ footer{padding:32px 0;color:#94a3b8;text-align:center;font-size:.86rem;border-to
       <p class="lead" style="margin-bottom:36px;">The technical base I bring into procurement. I understand products not only as purchase items, but as real components in assembly, service and plant environments.</p>
 
       <div class="proof-feature">
-        <img src="img/faro-arm-scan.jpg" alt="FARO Arm scanning setup with CAD reconstruction on screen">
+        <img src="img/faro-arm-scan.jpg" alt="FARO Arm scanning setup with CAD reconstruction on screen" onclick="openLightbox('img/faro-arm-scan.jpg')" style="cursor:zoom-in">
         <div class="text">
           <h3>Reverse engineering with FARO Arm + Geomagic Design X</h3>
           <p>Used FARO Arm scanning and CAD reconstruction to rebuild worn pump component geometry. This work requires patience, accuracy and understanding of fitment, since redesigned parts must match existing assemblies even when original drawings are missing.</p>
@@ -331,12 +335,12 @@ footer{padding:32px 0;color:#94a3b8;text-align:center;font-size:.86rem;border-to
       </div>
 
       <div class="gallery">
-        <div class="g-card" onclick="openLightbox('img/support-stand-horizontal.jpg')"><div class="img-wrap"><img src="img/support-stand-horizontal.jpg" alt="Pump support stand"></div><div class="body"><h3>Support stand for pump setup</h3><p>Practical fit, handling and shop-floor use.</p></div></div>
-        <div class="g-card" onclick="openLightbox('img/adjustable-pump-stand.jpg')"><div class="img-wrap"><img src="img/adjustable-pump-stand.jpg" alt="Adjustable pump stand"></div><div class="body"><h3>Adjustable pump stand</h3><p>Fits different pump sizes for safer assembly work.</p></div></div>
-        <div class="g-card" onclick="openLightbox('img/pump-impellers.jpg')"><div class="img-wrap"><img src="img/pump-impellers.jpg" alt="Pump impellers"></div><div class="body"><h3>Impeller design and inspection</h3><p>Dimensions, tolerances and documentation on critical components.</p></div></div>
-        <div class="g-card" onclick="openLightbox('img/pump-shaft-assembly.jpg')"><div class="img-wrap"><img src="img/pump-shaft-assembly.jpg" alt="Multi-stage pump assembly"></div><div class="body"><h3>Multi-stage pump assembly</h3><p>Large industrial pump assemblies for power plant service.</p></div></div>
-        <div class="g-card" onclick="openLightbox('img/boiler-feed-pump-coupling.jpg')"><div class="img-wrap"><img src="img/boiler-feed-pump-coupling.jpg" alt="Boiler feed pump setup"></div><div class="body"><h3>Boiler feed pump setup</h3><p>Service, redesign and coupling-related reverse engineering.</p></div></div>
-        <div class="g-card" onclick="openLightbox('img/turbine-room.jpg')"><div class="img-wrap"><img src="img/turbine-room.jpg" alt="Turbine room at power plant"></div><div class="body"><h3>Power plant site exposure</h3><p>On-site visits to understand real operating conditions.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/support-stand-horizontal.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/support-stand-horizontal.jpg" alt="Pump support stand"></div><div class="body"><h3>Support stand for pump setup</h3><p>Practical fit, handling and shop-floor use.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/adjustable-pump-stand.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/adjustable-pump-stand.jpg" alt="Adjustable pump stand"></div><div class="body"><h3>Adjustable pump stand</h3><p>Fits different pump sizes for safer assembly work.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/pump-impellers.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/pump-impellers.jpg" alt="Pump impellers"></div><div class="body"><h3>Impeller design and inspection</h3><p>Dimensions, tolerances and documentation on critical components.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/pump-shaft-assembly.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/pump-shaft-assembly.jpg" alt="Multi-stage pump assembly"></div><div class="body"><h3>Multi-stage pump assembly</h3><p>Large industrial pump assemblies for power plant service.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/boiler-feed-pump-coupling.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/boiler-feed-pump-coupling.jpg" alt="Boiler feed pump setup"></div><div class="body"><h3>Boiler feed pump setup</h3><p>Service, redesign and coupling-related reverse engineering.</p></div></div>
+        <div class="g-card" onclick="openLightbox('img/turbine-room.jpg')"><span class="zoom-hint">Click to enlarge</span><div class="img-wrap"><img src="img/turbine-room.jpg" alt="Turbine room at power plant"></div><div class="body"><h3>Power plant site exposure</h3><p>On-site visits to understand real operating conditions.</p></div></div>
       </div>
     </div>
   </section>
