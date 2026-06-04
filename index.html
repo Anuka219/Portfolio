@@ -500,6 +500,23 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLigh
     if(el) observer.observe(el);
   });
 })();
+// --- Hidden visitor counter (only visible with ?stats in URL) ---
+(async function(){
+  try {
+    const showStats = new URLSearchParams(location.search).has('stats');
+    const url = showStats
+      ? 'https://abacus.jasoncameron.dev/get/anuka-portfolio/views'
+      : 'https://abacus.jasoncameron.dev/hit/anuka-portfolio/views';
+    const r = await fetch(url);
+    const d = await r.json();
+    if (showStats) {
+      const div = document.createElement('div');
+      div.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#0f172a;color:#fbbf24;padding:14px 20px;border-radius:10px;font-size:.95rem;z-index:9999;font-weight:600;box-shadow:0 12px 32px rgba(0,0,0,.3);font-family:Inter,sans-serif';
+      div.innerHTML = '👁 Total visitors: <span style="color:#fff">' + (d.value || 0) + '</span>';
+      document.body.appendChild(div);
+    }
+  } catch(e) {}
+})();
 </script>
 
 </body>
